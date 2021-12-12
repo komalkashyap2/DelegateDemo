@@ -20,6 +20,11 @@ namespace DelegateDemo
         {
             return a - b;
         }
+        static int Multiplication(int a, int b)
+        {
+            return a * b;
+        }
+     
         static void Main(string[] args)
         {
             Console.WriteLine("Delegate POC!!!");
@@ -27,10 +32,12 @@ namespace DelegateDemo
             //Delegate instantiation
             operation obj = new operation(Addition);
             operation p = new operation(Substraction);
+            operation op = new operation(Multiplication);
 
             //output
             Console.WriteLine("Addition is={0}", obj(23, 27));
             Console.WriteLine("Substarction is={0}", p(29, 27));
+            Console.WriteLine("Multiplication is={0}", op(29, 27));
             Console.WriteLine();
         }
     }
