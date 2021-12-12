@@ -16,15 +16,21 @@ namespace DelegateDemo
         {
             return a + b;
         }
+        static int Substraction(int a, int b)
+        {
+            return a - b;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Delegate POC!!!");
 
             //Delegate instantiation
             operation obj = new operation(Addition);
+            operation p = new operation(Substraction);
 
             //output
             Console.WriteLine("Addition is={0}", obj(23, 27));
+            Console.WriteLine("Substarction is={0}", p(29, 27));
             Console.WriteLine();
         }
     }
